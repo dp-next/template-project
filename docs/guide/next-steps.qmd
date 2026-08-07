@@ -1,0 +1,88 @@
+---
+title: "Next steps"
+description: |
+  Tasks to do in your project after applying the template to it.
+order: 4
+---
+
+While most of the post-copy steps are listed in the created `TODO.md` file
+within the project, this documents some more details for these steps. Use this
+guide alongside the `TODO.md` to complete those tasks. There are post-copy tasks
+for two types of people: the person creating the project and the person who will
+actually use it. Sometimes these are the same person, but in DP-Next they are
+usually two different people. That's because we need to do some GitHub admin
+tasks after creating the repository that only some people have access
+permissions for. So this guide is split into those two people: **creator** and
+**researcher**.
+
+## Creator
+
+### Setting up a GitHub repository
+
+::: callout-warning
+These series of steps are only necessary if you are using this template for a
+repository that is part of the Seedcase Project. If you want a quick way of
+putting your project on GitHub, you can use the `gh` command line tool to upload
+the project to GitHub:
+
+```bash {filename="Terminal"}
+gh repo create ORG/REPO --source=. --public`
+```
+:::
+
+We have a custom command line tool that we developed to help manage GitHub
+repositories for Seedcase Project repositories. While it's useful for us, it
+isn't designed or build in a way that makes it easy for others to use.
+
+For setting up a GitHub repository for the created project that will be part of
+the Seedcase Project, you'll need to install our internal tool
+[`spaid`](https://github.com/seedcase-project/spaid) and use the following
+commands to run the next setup steps:
+
+```bash {filename="Terminal"}
+spaid_gh_create_repo_from_local -h
+spaid_gh_set_repo_settings -h
+spaid_gh_ruleset_basic_protect_main -h
+spaid_gh_ruleset_require_pr -h
+```
+
+Some configuration is needed after copying this template to a new repository,
+including configuration external to the repository. Some GitHub workflows
+require installing GitHub Apps, for greater security purposes and easier
+administration when managing multiple repositories. The [security
+section](https://guidebook.seedcase-project.org/operations/security#using-github-apps-to-generate-tokens)
+in our [Guidebook](https://guidebook.seedcase-project.org/) provides some
+instructions on how to set up GitHub Apps, secrets, and variables. Ideally the
+secrets and variables should be set up in the organization settings. The
+specific workflows in this template that require this additional setup are:
+
+- The workflow `.github/workflows/add-to-project.yml` requires the
+  [add-to-board-token](https://github.com/apps/add-to-board-token) GitHub App
+  (another Seedcase app), along with the `ADD_TO_BOARD_TOKEN` secret and the
+  `ADD_TO_BOARD_APP_ID` variable of the GitHub App's ID.
+
+### Auto-releasing to Zenodo
+
+::: callout-warning
+This step is only necessary if you are using this template for a repository that
+is part of the Seedcase Project. If you are using this template for a different
+project, you can skip this step. If you want to set up auto-releasing to Zenodo
+for a different project, you can use this section to guide you to setting it up
+for your project.
+:::
+
+If you create a release on GitHub, either manually or through a GitHub workflow,
+you can have that release automatically create a record on Zenodo, which is a
+service that allows you to archive projects and create a DOI for it.
+
+GitHub and Zenodo have an integration that, when set up, will automatically
+create a [Zenodo record](https://help.zenodo.org/docs/deposit/about-records/)
+from a [GitHub
+release](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases).
+This is useful if you want to create a DOI for your project, which will allow
+you or others to cite it in their work as well as provide more exposure for your
+project. Connecting GitHub to Zenodo is very easy, check out Zenodo's
+[guide](https://help.zenodo.org/docs/github/archive-software/github-upload/) on
+it.
+
+## Researcher

@@ -1,0 +1,49 @@
+---
+title: "Using the template"
+description: |
+  A walk-through on how to use this template for creating a new project or
+  applying it to an existing project.
+order: 2
+---
+
+This guide walks through how to use this template to create a new project or
+apply it to an existing project.
+
+## Creating a new project
+
+You can use this template to create a new project with a standard set of files
+and folders, as well as all the features and configurations to make it easier to
+build your project smoothly and effectively. First, open a terminal and run the
+following command:
+
+```bash {filename="Terminal"}
+uvx copier copy gh:dp-next/template-project path/to/PROJECT-NAME
+```
+
+The `copy` command uses the template on GitHub (`gh:`) at the
+`dp-next/template-project` location. The `path/to/` is the location where you'd
+like the new project to be created and `PROJECT-NAME` is the name you want to
+give for the new project's directory and (ideally) the GitHub repository for the
+project. The name should be something short and meaningful, ideally lowercase,
+with `-` instead of spaces, and no special characters.
+
+## Applying to an existing project
+
+If you want to use this template on an existing project, you can use the `copy`
+command of `copier` just like above to apply the template to the existing
+project. This will add all the template's files and configurations to the
+existing project.
+
+```bash {filename="Terminal"}
+uvx copier copy gh:dp-next/template-project path/to/EXISTING-PROJECT
+```
+
+See the comment above in the "Creating a new project" section about the naming
+of the existing project directory. It will go through a series of prompts, as in
+the case of creating a new project, including asking if you want to overwrite
+existing files.
+
+::: callout-note
+To use the `copy` command, the existing project needs to be tracked by Git and
+in a clean state (no changes have been made in the working directory).
+:::

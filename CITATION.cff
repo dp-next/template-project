@@ -1,0 +1,21 @@
+title: "An opinionated template for data analysis projects within DP-Next"
+abstract: |
+  A template for making a data analysis-based research project that follows the
+  DP-Next practices.
+authors:
+  - family-names: Johnston
+    given-names: Luke William
+    orcid: "https://orcid.org/0000-0003-4169-2616"
+cff-version: 1.2.0
+# doi: ""
+# date-released: ""
+keywords:
+  - "copier template"
+  - "template"
+  - "template repository"
+  - "template project"
+  - "template data analysis"
+license: MIT
+message: "If you use this software, please cite it using these metadata."
+repository-code: "https://github.com/dp-next/template-project"
+url: "https://dp-next.github.io/template-project"

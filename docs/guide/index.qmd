@@ -1,0 +1,14 @@
+---
+title: "Guide"
+listing:
+  contents: .
+  type: grid
+  grid-columns: 1
+  sort: "order"
+  fields:
+    - title
+    - description
+---
+
+A guide to using the template project to create data analysis-based research
+projects.

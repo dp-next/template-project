@@ -1,0 +1,69 @@
+---
+format: gfm
+execute:
+  echo: false
+jupyter: python3
+metadata-files:
+  - _metadata.yml
+---
+
+# {{< meta tagline >}}
+
+{{< include /docs/includes/_badges.qmd >}}
+
+This repository contains a [Copier](https://copier.readthedocs.io/en/stable/)
+template for setting up a new repository for a data analysis-based research
+project in DP-Next. We made {{< meta gh.repo >}} to make it easier for
+researchers to get started with doing a research project within DP-Next. So
+we've designed this template to make it easier to create, develop, and maintain
+those types of projects.
+
+Check out our [website]({{< meta links.site >}}) for more information, such as
+the features it provides and a [guide]({{< meta links.site >}}/docs/guide) to
+using the template. For a list of changes, see our [changelog](CHANGELOG.md)
+page.
+
+::: callout-tip
+This template repository was generated from the
+[t-squared](https://github.com/seedcase-project/t-squared) Seedcase template
+:tada:
+:::
+
+## Contributing
+
+Check out our [contributing page](CONTRIBUTING.md) for information on how to
+contribute to the project, including how to set up your development environment.
+
+Please note that this project is released with a [Contributor Code of
+Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to
+abide by its terms.
+
+::: content-hidden
+<!-- TODO: Unhide when there are more contributors -->
+### Contributors
+
+{{< include /docs/includes/_contributors.qmd >}}
+:::
+
+## Licensing
+
+This project is licensed under the [MIT License](LICENSE.md).
+
+## Citing
+
+If you use this project in your work, please cite it as follows:
+
+```{python}
+#| label: create-citation
+#| output: asis
+
+!uvx --quiet cffconvert --format apalike
+```
+
+Or as a BibTeX entry:
+
+```{python}
+#| label: create-bibtex
+
+!uvx --quiet cffconvert --format bibtex
+```

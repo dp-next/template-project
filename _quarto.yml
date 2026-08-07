@@ -1,0 +1,46 @@
+project:
+  type: dp-next-theme
+  render:
+    # Don't render anything in the template directory.
+    - "!template/"
+    - "*.qmd"
+    - "*.md"
+
+website:
+  title: "Template Project"
+  site-url: "https://dp-next.github.io/template-project/"
+  repo-url: "https://github.com/dp-next/template-project"
+  navbar:
+    # TODO: Add logo when they make one.
+    # logo: "_extensions/..."
+    # logo-alt: "DP-Next logo: Main page"
+    pinned: true
+    left:
+      - text: "Overview"
+        href: index.qmd
+      - text: "Guide"
+        href: docs/guide/index.qmd
+    tools:
+      - icon: github
+        href: "https://github.com/dp-next/template-project"
+        aria-label: "GitHub icon: Source repository"
+  sidebar:
+    - id: overview
+      pinned: true
+      style: "floating"
+      contents:
+        - text: "Welcome"
+          href: index.qmd
+        - CHANGELOG.md
+        - CONTRIBUTING.md
+    - id: guide
+      contents:
+        - section: "Guide"
+          href: docs/guide/index.qmd
+          contents:
+            - docs/guide/installing.qmd
+            - docs/guide/using.qmd
+            - docs/guide/updating.qmd
+            - docs/guide/next-steps.qmd
+
+format: dp-next-theme-html

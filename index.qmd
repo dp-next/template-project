@@ -1,0 +1,33 @@
+---
+title: "{{< meta gh.repo >}}: {{< meta tagline >}}"
+---
+
+{{< include /docs/includes/_badges.qmd >}}
+
+This is a template for creating a new repository for data analysis-based
+research projects done within DP-Next. We use this template to quickly get
+started with a repository that has everything needed for doing research projects
+that follows how we (hope to) work in DP-Next.
+
+## Features
+
+- Sets the project up as an [R](https://r-project.org) Project.
+- Uses the [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
+- Uses a GitHub workflow to automatically add pull requests and issues to a
+  project board.
+
+## Want to contribute?
+
+We would love your feedback or contributions! Head over to our [GitHub
+repository]({{< meta links.github >}}) to share your ideas or contribute code.
+Your input makes us better!
+
+::: content-hidden
+### Contributors
+
+{{< include /docs/includes/_contributors.qmd >}}
+:::
+
+## Licensing
+
+This project is licensed under the [MIT License](/LICENSE.md).

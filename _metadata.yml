@@ -1,0 +1,9 @@
+gh:
+  org: "dp-next"
+  repo: "template-project"
+
+tagline: "An opinionated template for data analysis projects within DP-Next"
+
+links:
+  github: "https://github.com/dp-next/template-project"
+  site: "https://dp-next.github.io/template-project/"

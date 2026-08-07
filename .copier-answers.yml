@@ -1,0 +1,7 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 0.10.0
+_src_path: gh:seedcase-project/t-squared
+for_seedcase: true
+github_repo: template-project
+github_user: dp-next
+hosting_provider: gh-pages
