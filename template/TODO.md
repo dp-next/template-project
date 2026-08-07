@@ -1,4 +1,6 @@
-# For admin/repo creator
+# Next steps
+
+## For admin/repo creator
 
 Review the [template guide](https://t-squared.seedcase-project.org/docs/guide/)
 for more information on how to use the template and the next steps after copying
@@ -24,7 +26,7 @@ Install or add the
 - Connect the `ADD_TO_BOARD_APP_ID` variable of the GitHub Apps' IDs (or create
   the variable if you haven't yet) to the repository.
 
-# For researcher
+## For researcher
 
 - Review all TODO items in this file and throughout the project files that have
   a `TODO` tag.
