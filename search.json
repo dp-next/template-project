@@ -1,152 +1,17 @@
 [
   {
-    "objectID": "TODO.html",
-    "href": "TODO.html",
-    "title": "Template Project",
+    "objectID": "LICENSE.html",
+    "href": "LICENSE.html",
+    "title": "MIT License",
     "section": "",
-    "text": "Install the spaid CLI tool and run these setup steps:\n\nspaid_gh_ruleset_basic_protect_main -h to protect the main branch.\nspaid_gh_ruleset_require_pr -h to require pull requests for changes to the main branch.\n\nInstall or add the auto-release-token and add-to-board-token GitHub Apps\n\nCreate an UPDATE_VERSION_TOKEN and ADD_TO_BOARD_TOKEN secret for the GitHub Apps if you haven’t already and connect them to the repository.\nCreate an UPDATE_VERSION_APP_ID and ADD_TO_BOARD_APP_ID variable of the GitHub Apps’ IDs if you haven’t already and connect them to the repository.\n\nRun quarto publish gh-pages to setup and start publishing the website to GitHub Pages.\nIf relevant, connect pre-commit.ci to the repository and enable the pre-commit hooks."
+    "text": "MIT License\nCopyright (c) 2026 template-project authors\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
   },
   {
-    "objectID": "CONTRIBUTING.html",
-    "href": "CONTRIBUTING.html",
-    "title": "Contributing",
+    "objectID": "CODE_OF_CONDUCT.html",
+    "href": "CODE_OF_CONDUCT.html",
+    "title": "Contributor Code of Conduct",
     "section": "",
-    "text": "The easiest way to contribute is to report issues or bugs that you might find while using template-project. You can do this by creating a new issue on our GitHub repository.\n\n\n\nIf you would like to contribute content, please check out our guidebook for more specific details on how we work and develop. It is a regularly evolving document, so is at various states of completion.\nTo contribute to template-project, you first need to install uv and justfile. We use uv and justfile to manage our project, such as to run checks and test the template. Both the uv and justfile websites have a more detailed guide on using uv, but below are some simple instructions to get you started.\nIt’s easiest to first install uv and then install justfile with uv. Once you’ve installed uv, install justfile by running:\nuv tool install rust-just\nWe keep all our development workflows in the justfile, so you can explore it to see what commands are available. To see a list of commands available, run:\njust\nAs you contribute, make sure your changes will pass our tests by opening a terminal so that the working directory is the root of this project (template-project/) and running:\njust run-all\nWhen testing the template, Copier can only use content kept in the Git history. Meaning that if you make changes to the template and try to test it, it won’t be able to test those changes. You have to commit the changes first in order for Copier to use them.\nWhen committing changes, please try to follow Conventional Commits as Git messages. Using this convention allows us to be able to automatically create a release based on the commit message by using Cocogitto. If you don’t use Conventional Commits when making a commit, we will revise the pull request title to follow that format. That’s because we use squash merges when merging pull requests, so all other commits in the pull request will be squashed into one commit.\n\n\n\nThis list describes the default files that are included in the template as well as explains a bit more about them and what they are used for.\n\n.copier-answers.yml: Contains the answers you gave when copying the project from the template. You should not modify this file directly.\n.github/: Contains GitHub-specific files, such as issue and pull request templates, workflows, dependabot configuration, pull request templates, and a CODEOWNERS file.\n_quarto.yml: Quarto configuration file for the website, including settings for the website, such as the theme, navigation, and other options.\n_metadata.yml: Quarto metadata file for the website, including information about the project, such as the titles and GitHub names.\n.gitignore: This ignore file tells Git which files to not track. Unless you know what you are doing, it’s best to not touch this file.\n.pre-commit-config.yaml: Pre-commit configuration file for managing and running checks before each commit.\n.config/: Contains configuration files for various tools used in the project, such as:\n\ntypos.toml: typos spell checker configuration file.\nrumdl.toml and panache.toml: rumdl and Panache configuration file for formatting Markdown files in the project.\ncog.toml: Cocogitto configuration file for managing versions.\ncliff.toml: git-cliff configuration file for creating the changelog.\n\n.editorconfig: Editor configuration file for EditorConfig to maintain consistent coding styles across different editors and IDEs.\nCITATION.cff: Structured citation metadata for your project when archived on Zenodo and used by GitHub to display the citation information on the repository page. This is used to add the metadata to Zenodo when a GitHub release has been uploaded to Zenodo.\njustfile: just configuration file for scripting project tasks.\nCHANGELOG.md: Changelog file for tracking changes in the project.\nCONTRIBUTING.md: Guidelines for contributing to the project.",
-    "crumbs": [
-      "Overview",
-      "Contributing"
-    ]
-  },
-  {
-    "objectID": "CONTRIBUTING.html#issues-and-bugs",
-    "href": "CONTRIBUTING.html#issues-and-bugs",
-    "title": "Contributing",
-    "section": "",
-    "text": "The easiest way to contribute is to report issues or bugs that you might find while using template-project. You can do this by creating a new issue on our GitHub repository.",
-    "crumbs": [
-      "Overview",
-      "Contributing"
-    ]
-  },
-  {
-    "objectID": "CONTRIBUTING.html#adding-or-modifying-content",
-    "href": "CONTRIBUTING.html#adding-or-modifying-content",
-    "title": "Contributing",
-    "section": "",
-    "text": "If you would like to contribute content, please check out our guidebook for more specific details on how we work and develop. It is a regularly evolving document, so is at various states of completion.\nTo contribute to template-project, you first need to install uv and justfile. We use uv and justfile to manage our project, such as to run checks and test the template. Both the uv and justfile websites have a more detailed guide on using uv, but below are some simple instructions to get you started.\nIt’s easiest to first install uv and then install justfile with uv. Once you’ve installed uv, install justfile by running:\nuv tool install rust-just\nWe keep all our development workflows in the justfile, so you can explore it to see what commands are available. To see a list of commands available, run:\njust\nAs you contribute, make sure your changes will pass our tests by opening a terminal so that the working directory is the root of this project (template-project/) and running:\njust run-all\nWhen testing the template, Copier can only use content kept in the Git history. Meaning that if you make changes to the template and try to test it, it won’t be able to test those changes. You have to commit the changes first in order for Copier to use them.\nWhen committing changes, please try to follow Conventional Commits as Git messages. Using this convention allows us to be able to automatically create a release based on the commit message by using Cocogitto. If you don’t use Conventional Commits when making a commit, we will revise the pull request title to follow that format. That’s because we use squash merges when merging pull requests, so all other commits in the pull request will be squashed into one commit.",
-    "crumbs": [
-      "Overview",
-      "Contributing"
-    ]
-  },
-  {
-    "objectID": "CONTRIBUTING.html#explanation-of-files-and-folders",
-    "href": "CONTRIBUTING.html#explanation-of-files-and-folders",
-    "title": "Contributing",
-    "section": "",
-    "text": "This list describes the default files that are included in the template as well as explains a bit more about them and what they are used for.\n\n.copier-answers.yml: Contains the answers you gave when copying the project from the template. You should not modify this file directly.\n.github/: Contains GitHub-specific files, such as issue and pull request templates, workflows, dependabot configuration, pull request templates, and a CODEOWNERS file.\n_quarto.yml: Quarto configuration file for the website, including settings for the website, such as the theme, navigation, and other options.\n_metadata.yml: Quarto metadata file for the website, including information about the project, such as the titles and GitHub names.\n.gitignore: This ignore file tells Git which files to not track. Unless you know what you are doing, it’s best to not touch this file.\n.pre-commit-config.yaml: Pre-commit configuration file for managing and running checks before each commit.\n.config/: Contains configuration files for various tools used in the project, such as:\n\ntypos.toml: typos spell checker configuration file.\nrumdl.toml and panache.toml: rumdl and Panache configuration file for formatting Markdown files in the project.\ncog.toml: Cocogitto configuration file for managing versions.\ncliff.toml: git-cliff configuration file for creating the changelog.\n\n.editorconfig: Editor configuration file for EditorConfig to maintain consistent coding styles across different editors and IDEs.\nCITATION.cff: Structured citation metadata for your project when archived on Zenodo and used by GitHub to display the citation information on the repository page. This is used to add the metadata to Zenodo when a GitHub release has been uploaded to Zenodo.\njustfile: just configuration file for scripting project tasks.\nCHANGELOG.md: Changelog file for tracking changes in the project.\nCONTRIBUTING.md: Guidelines for contributing to the project.",
-    "crumbs": [
-      "Overview",
-      "Contributing"
-    ]
-  },
-  {
-    "objectID": "docs/guide/using.html",
-    "href": "docs/guide/using.html",
-    "title": "Using the template",
-    "section": "",
-    "text": "This guide walks through how to use this template to create a new project or apply it to an existing project.",
-    "crumbs": [
-      "Guide",
-      "Using the template"
-    ]
-  },
-  {
-    "objectID": "docs/guide/using.html#creating-a-new-project",
-    "href": "docs/guide/using.html#creating-a-new-project",
-    "title": "Using the template",
-    "section": "Creating a new project",
-    "text": "Creating a new project\nYou can use this template to create a new project with a standard set of files and folders, as well as all the features and configurations to make it easier to build your project smoothly and effectively. First, open a terminal and run the following command:\n\n\nTerminal\n\nuvx copier copy gh:dp-next/template-project path/to/PROJECT-NAME\n\nThe copy command uses the template on GitHub (gh:) at the dp-next/template-project location. The path/to/ is the location where you’d like the new project to be created and PROJECT-NAME is the name you want to give for the new project’s directory and (ideally) the GitHub repository for the project. The name should be something short and meaningful, ideally lowercase, with - instead of spaces, and no special characters.",
-    "crumbs": [
-      "Guide",
-      "Using the template"
-    ]
-  },
-  {
-    "objectID": "docs/guide/using.html#applying-to-an-existing-project",
-    "href": "docs/guide/using.html#applying-to-an-existing-project",
-    "title": "Using the template",
-    "section": "Applying to an existing project",
-    "text": "Applying to an existing project\nIf you want to use this template on an existing project, you can use the copy command of copier just like above to apply the template to the existing project. This will add all the template’s files and configurations to the existing project.\n\n\nTerminal\n\nuvx copier copy gh:dp-next/template-project path/to/EXISTING-PROJECT\n\nSee the comment above in the “Creating a new project” section about the naming of the existing project directory. It will go through a series of prompts, as in the case of creating a new project, including asking if you want to overwrite existing files.\n\n\n\n\n\n\nNote\n\n\n\nTo use the copy command, the existing project needs to be tracked by Git and in a clean state (no changes have been made in the working directory).",
-    "crumbs": [
-      "Guide",
-      "Using the template"
-    ]
-  },
-  {
-    "objectID": "docs/guide/next-steps.html",
-    "href": "docs/guide/next-steps.html",
-    "title": "Next steps",
-    "section": "",
-    "text": "While most of the post-copy steps are listed in the created TODO.md file within the project, this documents some more details for these steps. Use this guide alongside the TODO.md to complete those tasks. There are post-copy tasks for two types of people: the person creating the project and the person who will actually use it. Sometimes these are the same person, but in DP-Next they are usually two different people. That’s because we need to do some GitHub admin tasks after creating the repository that only some people have access permissions for. So this guide is split into those two people: creator and researcher.",
-    "crumbs": [
-      "Guide",
-      "Next steps"
-    ]
-  },
-  {
-    "objectID": "docs/guide/next-steps.html#creator",
-    "href": "docs/guide/next-steps.html#creator",
-    "title": "Next steps",
-    "section": "Creator",
-    "text": "Creator\n\nSetting up a GitHub repository\n\n\n\n\n\n\nWarning\n\n\n\nThese series of steps are only necessary if you are using this template for a repository that is part of the Seedcase Project. If you want a quick way of putting your project on GitHub, you can use the gh command line tool to upload the project to GitHub:\n\n\nTerminal\n\ngh repo create ORG/REPO --source=. --public`\n\n\n\nWe have a custom command line tool that we developed to help manage GitHub repositories for Seedcase Project repositories. While it’s useful for us, it isn’t designed or build in a way that makes it easy for others to use.\nFor setting up a GitHub repository for the created project that will be part of the Seedcase Project, you’ll need to install our internal tool spaid and use the following commands to run the next setup steps:\n\n\nTerminal\n\nspaid_gh_create_repo_from_local -h\nspaid_gh_set_repo_settings -h\nspaid_gh_ruleset_basic_protect_main -h\nspaid_gh_ruleset_require_pr -h\n\nSome configuration is needed after copying this template to a new repository, including configuration external to the repository. Some GitHub workflows require installing GitHub Apps, for greater security purposes and easier administration when managing multiple repositories. The security section in our Guidebook provides some instructions on how to set up GitHub Apps, secrets, and variables. Ideally the secrets and variables should be set up in the organization settings. The specific workflows in this template that require this additional setup are:\n\nThe workflow .github/workflows/add-to-project.yml requires the add-to-board-token GitHub App (another Seedcase app), along with the ADD_TO_BOARD_TOKEN secret and the ADD_TO_BOARD_APP_ID variable of the GitHub App’s ID.\n\n\n\nAuto-releasing to Zenodo\n\n\n\n\n\n\nWarning\n\n\n\nThis step is only necessary if you are using this template for a repository that is part of the Seedcase Project. If you are using this template for a different project, you can skip this step. If you want to set up auto-releasing to Zenodo for a different project, you can use this section to guide you to setting it up for your project.\n\n\nIf you create a release on GitHub, either manually or through a GitHub workflow, you can have that release automatically create a record on Zenodo, which is a service that allows you to archive projects and create a DOI for it.\nGitHub and Zenodo have an integration that, when set up, will automatically create a Zenodo record from a GitHub release. This is useful if you want to create a DOI for your project, which will allow you or others to cite it in their work as well as provide more exposure for your project. Connecting GitHub to Zenodo is very easy, check out Zenodo’s guide on it.",
-    "crumbs": [
-      "Guide",
-      "Next steps"
-    ]
-  },
-  {
-    "objectID": "docs/guide/next-steps.html#researcher",
-    "href": "docs/guide/next-steps.html#researcher",
-    "title": "Next steps",
-    "section": "Researcher",
-    "text": "Researcher",
-    "crumbs": [
-      "Guide",
-      "Next steps"
-    ]
-  },
-  {
-    "objectID": "docs/guide/index.html",
-    "href": "docs/guide/index.html",
-    "title": "Guide",
-    "section": "",
-    "text": "A guide to using the template project to create data analysis-based research projects.\n\n\n\n\n\n\n\n\n\n\n\nInstalling\n\n\nInstructions for installing the required (and optional) programs to use this template and create a new project from it.\n\n\n\n\n\n\n\n\n\nUsing the template\n\n\nA walk-through on how to use this template for creating a new project or applying it to an existing project.\n\n\n\n\n\n\n\n\n\nUpdating a project\n\n\nA guide on updating a project that uses this template with the latest changes from the template.\n\n\n\n\n\n\n\n\n\nNext steps\n\n\nTasks to do in your project after applying the template to it.\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Guide"
-    ]
-  },
-  {
-    "objectID": "docs/guide/installing.html",
-    "href": "docs/guide/installing.html",
-    "title": "Installing",
-    "section": "",
-    "text": "There are a few programs that are required to use this template to create a project:\n\nuv: A tool for managing Python environments and running commands.\nPython: Required by Copier, the template tool.\nCopier: A template tool for making new projects in a standardised and structured way.\njust: A build and development management tool that helps with running common build and check tasks.\n\nYou can use uv to install these required programs, so install that first. After you’ve installed uv, install the other programs using:\n\n\nTerminal\n\nuv tool install copier rust-just\n\nuv will also install Python for you when you install these tools.\nThere are some optional, though strongly recommended, programs to install and use in any project created with this template:\n\nGit: For version control and setting up Git to track the newly created project.\nLychee: A link checker that we include in the justfile for checking for broken links in the files.\nQuarto: A scientific and technical publishing system built on Pandoc. The website built with this template is created with Quarto, and the project created from this template is also set up to use Quarto too.\ngh cli: For managing GitHub repositories and settings from the command line. There are some post-creation steps we’ve included that use gh to simplify setting up a GitHub repository for the project.",
-    "crumbs": [
-      "Guide",
-      "Installing"
-    ]
-  },
-  {
-    "objectID": "docs/guide/updating.html",
-    "href": "docs/guide/updating.html",
-    "title": "Updating a project",
-    "section": "",
-    "text": "One of the biggest strengths of Copier is that it allows you to easily update your project with any changes that have been made to the template since you first copied it. There are two ways to update (or sync) an existing project with the latest changes from the template: update and recopy.\n\nUse update to apply template updates to your project without overwriting local changes. update will compare the version of the template you used when you first copied the template with the current version of the template, and then apply the changes that are different. This also means it won’t overwrite any changes you made to files in your current project, for example, if you deleted a file that was in the template, it won’t be copied back.\nUse recopy if you want to reapply the template from scratch, which will overwrite any changes you made to the files that were copied from the template. This is useful if you want to reset the project to the state of the template. For example, if you deleted a file but want it back from the template or are simply curious to see if there are any new changes that you might want to use.\n\nIn both cases, the commands are very similar and use many of the same options as the copy command. If you want to use the same answers as given when you first copied the template, you can use the --defaults option. Then it will only prompt you for the questions that have changed since the last time you copied the template.\n\n\nTerminal\n\nuvx copier update --defaults\n# Or\nuvx copier recopy --defaults\n\nAs with the copy command, the project needs to be tracked by Git and must be in a clean state (no changes) for the update and recopy commands to work.",
-    "crumbs": [
-      "Guide",
-      "Updating a project"
-    ]
+    "text": "Contributor Code of Conduct\nAs contributors and maintainers of this project, we pledge to respect all people who contribute through reporting issues, posting suggestions, updating any material, submitting pull requests, and other activities.\nWe are committed to making participation in this project a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, or religion.\nExamples of unacceptable behavior by participants include the use of sexual language or imagery, derogatory comments or personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.\nProject maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct. Project maintainers who do not follow the Code of Conduct may be removed from the project team.\nInstances of abusive, harassing, or otherwise unacceptable behavior may be reported by opening an issue or contacting one or more of the project maintainers.\nThis Code of Conduct is adapted from the Contributor Covenant (https://www.contributor-covenant.org), version 1.0.0, available at https://www.contributor-covenant.org/version/1/0/0/"
   },
   {
     "objectID": "index.html",
@@ -193,17 +58,145 @@
     ]
   },
   {
-    "objectID": "CODE_OF_CONDUCT.html",
-    "href": "CODE_OF_CONDUCT.html",
-    "title": "Contributor Code of Conduct",
+    "objectID": "docs/guide/updating.html",
+    "href": "docs/guide/updating.html",
+    "title": "Updating a project",
     "section": "",
-    "text": "Contributor Code of Conduct\nAs contributors and maintainers of this project, we pledge to respect all people who contribute through reporting issues, posting suggestions, updating any material, submitting pull requests, and other activities.\nWe are committed to making participation in this project a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, or religion.\nExamples of unacceptable behavior by participants include the use of sexual language or imagery, derogatory comments or personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.\nProject maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct. Project maintainers who do not follow the Code of Conduct may be removed from the project team.\nInstances of abusive, harassing, or otherwise unacceptable behavior may be reported by opening an issue or contacting one or more of the project maintainers.\nThis Code of Conduct is adapted from the Contributor Covenant (https://www.contributor-covenant.org), version 1.0.0, available at https://www.contributor-covenant.org/version/1/0/0/"
+    "text": "One of the biggest strengths of Copier is that it allows you to easily update your project with any changes that have been made to the template since you first copied it. There are two ways to update (or sync) an existing project with the latest changes from the template: update and recopy.\n\nUse update to apply template updates to your project without overwriting local changes. update will compare the version of the template you used when you first copied the template with the current version of the template, and then apply the changes that are different. This also means it won’t overwrite any changes you made to files in your current project, for example, if you deleted a file that was in the template, it won’t be copied back.\nUse recopy if you want to reapply the template from scratch, which will overwrite any changes you made to the files that were copied from the template. This is useful if you want to reset the project to the state of the template. For example, if you deleted a file but want it back from the template or are simply curious to see if there are any new changes that you might want to use.\n\nIn both cases, the commands are very similar and use many of the same options as the copy command. If you want to use the same answers as given when you first copied the template, you can use the --defaults option. Then it will only prompt you for the questions that have changed since the last time you copied the template.\n\n\nTerminal\n\nuvx copier update --defaults\n# Or\nuvx copier recopy --defaults\n\nAs with the copy command, the project needs to be tracked by Git and must be in a clean state (no changes) for the update and recopy commands to work.",
+    "crumbs": [
+      "Guide",
+      "Updating a project"
+    ]
   },
   {
-    "objectID": "LICENSE.html",
-    "href": "LICENSE.html",
-    "title": "MIT License",
+    "objectID": "docs/guide/installing.html",
+    "href": "docs/guide/installing.html",
+    "title": "Installing",
     "section": "",
-    "text": "MIT License\nCopyright (c) 2026 template-project authors\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+    "text": "There are a few programs that are required to use this template to create a project:\n\nuv: A tool for managing Python environments and running commands.\nPython: Required by Copier, the template tool.\nCopier: A template tool for making new projects in a standardised and structured way.\njust: A build and development management tool that helps with running common build and check tasks.\n\nYou can use uv to install these required programs, so install that first. After you’ve installed uv, install the other programs using:\n\n\nTerminal\n\nuv tool install copier rust-just\n\nuv will also install Python for you when you install these tools.\nThere are some optional, though strongly recommended, programs to install and use in any project created with this template:\n\nGit: For version control and setting up Git to track the newly created project.\nLychee: A link checker that we include in the justfile for checking for broken links in the files.\nQuarto: A scientific and technical publishing system built on Pandoc. The website built with this template is created with Quarto, and the project created from this template is also set up to use Quarto too.\ngh cli: For managing GitHub repositories and settings from the command line. There are some post-creation steps we’ve included that use gh to simplify setting up a GitHub repository for the project.",
+    "crumbs": [
+      "Guide",
+      "Installing"
+    ]
+  },
+  {
+    "objectID": "docs/guide/index.html",
+    "href": "docs/guide/index.html",
+    "title": "Guide",
+    "section": "",
+    "text": "A guide to using the template project to create data analysis-based research projects.\n\n\n\n\n\n\n\n\n\n\n\nInstalling\n\n\nInstructions for installing the required (and optional) programs to use this template and create a new project from it.\n\n\n\n\n\n\n\n\n\nUsing the template\n\n\nA walk-through on how to use this template for creating a new project or applying it to an existing project.\n\n\n\n\n\n\n\n\n\nUpdating a project\n\n\nA guide on updating a project that uses this template with the latest changes from the template.\n\n\n\n\n\n\n\n\n\nNext steps\n\n\nTasks to do in your project after applying the template to it.\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "docs/guide/next-steps.html",
+    "href": "docs/guide/next-steps.html",
+    "title": "Next steps",
+    "section": "",
+    "text": "While most of the post-copy steps are listed in the created TODO.md file within the project, this documents some more details for these steps. Use this guide alongside the TODO.md to complete those tasks. There are post-copy tasks for two types of people: the person creating the project and the person who will actually use it. Sometimes these are the same person, but in DP-Next they are usually two different people. That’s because we need to do some GitHub admin tasks after creating the repository that only some people have access permissions for. So this guide is split into those two people: creator and researcher.",
+    "crumbs": [
+      "Guide",
+      "Next steps"
+    ]
+  },
+  {
+    "objectID": "docs/guide/next-steps.html#creator",
+    "href": "docs/guide/next-steps.html#creator",
+    "title": "Next steps",
+    "section": "Creator",
+    "text": "Creator\n\nSetting up a GitHub repository\n\n\n\n\n\n\nWarning\n\n\n\nThese series of steps are only necessary if you are using this template for a repository that is part of the Seedcase Project. If you want a quick way of putting your project on GitHub, you can use the gh command line tool to upload the project to GitHub:\n\n\nTerminal\n\ngh repo create ORG/REPO --source=. --public\n\n\n\nWe have a custom command line tool that we developed to help manage GitHub repositories for Seedcase Project repositories. While it’s useful for us, it isn’t designed or build in a way that makes it easy for others to use.\nFor setting up a GitHub repository for the created project that will be part of the Seedcase Project, you’ll need to install our internal tool spaid and use the following commands to run the next setup steps:\n\n\nTerminal\n\nspaid_gh_create_repo_from_local -h\nspaid_gh_set_repo_settings -h\nspaid_gh_ruleset_basic_protect_main -h\nspaid_gh_ruleset_require_pr -h\n\nSome configuration is needed after copying this template to a new repository, including configuration external to the repository. Some GitHub workflows require installing GitHub Apps, for greater security purposes and easier administration when managing multiple repositories. The security section in our Guidebook provides some instructions on how to set up GitHub Apps, secrets, and variables. Ideally the secrets and variables should be set up in the organization settings. The specific workflows in this template that require this additional setup are:\n\nThe workflow .github/workflows/add-to-project.yml requires the add-to-board-token GitHub App (another Seedcase app), along with the ADD_TO_BOARD_TOKEN secret and the ADD_TO_BOARD_APP_ID variable of the GitHub App’s ID.",
+    "crumbs": [
+      "Guide",
+      "Next steps"
+    ]
+  },
+  {
+    "objectID": "docs/guide/next-steps.html#researcher",
+    "href": "docs/guide/next-steps.html#researcher",
+    "title": "Next steps",
+    "section": "Researcher",
+    "text": "Researcher\nFor now, the TODO.md file contains enough information on what the next steps are for the researcher.",
+    "crumbs": [
+      "Guide",
+      "Next steps"
+    ]
+  },
+  {
+    "objectID": "docs/guide/using.html",
+    "href": "docs/guide/using.html",
+    "title": "Using the template",
+    "section": "",
+    "text": "This guide walks through how to use this template to create a new project or apply it to an existing project.",
+    "crumbs": [
+      "Guide",
+      "Using the template"
+    ]
+  },
+  {
+    "objectID": "docs/guide/using.html#creating-a-new-project",
+    "href": "docs/guide/using.html#creating-a-new-project",
+    "title": "Using the template",
+    "section": "Creating a new project",
+    "text": "Creating a new project\nYou can use this template to create a new project with a standard set of files and folders, as well as all the features and configurations to make it easier to build your project smoothly and effectively. First, open a terminal and run the following command:\n\n\nTerminal\n\nuvx copier copy gh:dp-next/template-project path/to/PROJECT-NAME\n\nThe copy command uses the template on GitHub (gh:) at the dp-next/template-project location. The path/to/ is the location where you’d like the new project to be created and PROJECT-NAME is the name you want to give for the new project’s directory and (ideally) the GitHub repository for the project. The name should be something short and meaningful, ideally lowercase, with - instead of spaces, and no special characters.",
+    "crumbs": [
+      "Guide",
+      "Using the template"
+    ]
+  },
+  {
+    "objectID": "docs/guide/using.html#applying-to-an-existing-project",
+    "href": "docs/guide/using.html#applying-to-an-existing-project",
+    "title": "Using the template",
+    "section": "Applying to an existing project",
+    "text": "Applying to an existing project\nIf you want to use this template on an existing project, you can use the copy command of copier just like above to apply the template to the existing project. This will add all the template’s files and configurations to the existing project.\n\n\nTerminal\n\nuvx copier copy gh:dp-next/template-project path/to/EXISTING-PROJECT\n\nSee the comment above in the “Creating a new project” section about the naming of the existing project directory. It will go through a series of prompts, as in the case of creating a new project, including asking if you want to overwrite existing files.\n\n\n\n\n\n\nNote\n\n\n\nTo use the copy command, the existing project needs to be tracked by Git and in a clean state (no changes have been made in the working directory).",
+    "crumbs": [
+      "Guide",
+      "Using the template"
+    ]
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Contributing",
+    "section": "",
+    "text": "The easiest way to contribute is to report issues or bugs that you might find while using template-project. You can do this by creating a new issue on our GitHub repository.\n\n\n\nIf you would like to contribute content, please check out our guidebook for more specific details on how we work and develop. It is a regularly evolving document, so is at various states of completion.\nTo contribute to template-project, you first need to install uv and justfile. We use uv and justfile to manage our project, such as to run checks and test the template. Both the uv and justfile websites have a more detailed guide on using uv, but below are some simple instructions to get you started.\nIt’s easiest to first install uv and then install justfile with uv. Once you’ve installed uv, install justfile by running:\nuv tool install rust-just\nWe keep all our development workflows in the justfile, so you can explore it to see what commands are available. To see a list of commands available, run:\njust\nAs you contribute, make sure your changes will pass our tests by opening a terminal so that the working directory is the root of this project (template-project/) and running:\njust run-all\nWhen testing the template, Copier can only use content kept in the Git history. Meaning that if you make changes to the template and try to test it, it won’t be able to test those changes. You have to commit the changes first in order for Copier to use them.\nWhen committing changes, please try to follow Conventional Commits as Git messages. Using this convention allows us to be able to automatically create a release based on the commit message by using Cocogitto. If you don’t use Conventional Commits when making a commit, we will revise the pull request title to follow that format. That’s because we use squash merges when merging pull requests, so all other commits in the pull request will be squashed into one commit.\n\n\n\nThis list describes the default files that are included in the template as well as explains a bit more about them and what they are used for.\n\n.copier-answers.yml: Contains the answers you gave when copying the project from the template. You should not modify this file directly.\n.github/: Contains GitHub-specific files, such as issue and pull request templates, workflows, dependabot configuration, pull request templates, and a CODEOWNERS file.\n_quarto.yml: Quarto configuration file for the website, including settings for the website, such as the theme, navigation, and other options.\n_metadata.yml: Quarto metadata file for the website, including information about the project, such as the titles and GitHub names.\n.gitignore: This ignore file tells Git which files to not track. Unless you know what you are doing, it’s best to not touch this file.\n.pre-commit-config.yaml: Pre-commit configuration file for managing and running checks before each commit.\n.config/: Contains configuration files for various tools used in the project, such as:\n\ntypos.toml: typos spell checker configuration file.\nrumdl.toml and panache.toml: rumdl and Panache configuration file for formatting Markdown files in the project.\ncog.toml: Cocogitto configuration file for managing versions.\ncliff.toml: git-cliff configuration file for creating the changelog.\n\n.editorconfig: Editor configuration file for EditorConfig to maintain consistent coding styles across different editors and IDEs.\nCITATION.cff: Structured citation metadata for your project when archived on Zenodo and used by GitHub to display the citation information on the repository page. This is used to add the metadata to Zenodo when a GitHub release has been uploaded to Zenodo.\njustfile: just configuration file for scripting project tasks.\nCHANGELOG.md: Changelog file for tracking changes in the project.\nCONTRIBUTING.md: Guidelines for contributing to the project.",
+    "crumbs": [
+      "Overview",
+      "Contributing"
+    ]
+  },
+  {
+    "objectID": "CONTRIBUTING.html#issues-and-bugs",
+    "href": "CONTRIBUTING.html#issues-and-bugs",
+    "title": "Contributing",
+    "section": "",
+    "text": "The easiest way to contribute is to report issues or bugs that you might find while using template-project. You can do this by creating a new issue on our GitHub repository.",
+    "crumbs": [
+      "Overview",
+      "Contributing"
+    ]
+  },
+  {
+    "objectID": "CONTRIBUTING.html#adding-or-modifying-content",
+    "href": "CONTRIBUTING.html#adding-or-modifying-content",
+    "title": "Contributing",
+    "section": "",
+    "text": "If you would like to contribute content, please check out our guidebook for more specific details on how we work and develop. It is a regularly evolving document, so is at various states of completion.\nTo contribute to template-project, you first need to install uv and justfile. We use uv and justfile to manage our project, such as to run checks and test the template. Both the uv and justfile websites have a more detailed guide on using uv, but below are some simple instructions to get you started.\nIt’s easiest to first install uv and then install justfile with uv. Once you’ve installed uv, install justfile by running:\nuv tool install rust-just\nWe keep all our development workflows in the justfile, so you can explore it to see what commands are available. To see a list of commands available, run:\njust\nAs you contribute, make sure your changes will pass our tests by opening a terminal so that the working directory is the root of this project (template-project/) and running:\njust run-all\nWhen testing the template, Copier can only use content kept in the Git history. Meaning that if you make changes to the template and try to test it, it won’t be able to test those changes. You have to commit the changes first in order for Copier to use them.\nWhen committing changes, please try to follow Conventional Commits as Git messages. Using this convention allows us to be able to automatically create a release based on the commit message by using Cocogitto. If you don’t use Conventional Commits when making a commit, we will revise the pull request title to follow that format. That’s because we use squash merges when merging pull requests, so all other commits in the pull request will be squashed into one commit.",
+    "crumbs": [
+      "Overview",
+      "Contributing"
+    ]
+  },
+  {
+    "objectID": "CONTRIBUTING.html#explanation-of-files-and-folders",
+    "href": "CONTRIBUTING.html#explanation-of-files-and-folders",
+    "title": "Contributing",
+    "section": "",
+    "text": "This list describes the default files that are included in the template as well as explains a bit more about them and what they are used for.\n\n.copier-answers.yml: Contains the answers you gave when copying the project from the template. You should not modify this file directly.\n.github/: Contains GitHub-specific files, such as issue and pull request templates, workflows, dependabot configuration, pull request templates, and a CODEOWNERS file.\n_quarto.yml: Quarto configuration file for the website, including settings for the website, such as the theme, navigation, and other options.\n_metadata.yml: Quarto metadata file for the website, including information about the project, such as the titles and GitHub names.\n.gitignore: This ignore file tells Git which files to not track. Unless you know what you are doing, it’s best to not touch this file.\n.pre-commit-config.yaml: Pre-commit configuration file for managing and running checks before each commit.\n.config/: Contains configuration files for various tools used in the project, such as:\n\ntypos.toml: typos spell checker configuration file.\nrumdl.toml and panache.toml: rumdl and Panache configuration file for formatting Markdown files in the project.\ncog.toml: Cocogitto configuration file for managing versions.\ncliff.toml: git-cliff configuration file for creating the changelog.\n\n.editorconfig: Editor configuration file for EditorConfig to maintain consistent coding styles across different editors and IDEs.\nCITATION.cff: Structured citation metadata for your project when archived on Zenodo and used by GitHub to display the citation information on the repository page. This is used to add the metadata to Zenodo when a GitHub release has been uploaded to Zenodo.\njustfile: just configuration file for scripting project tasks.\nCHANGELOG.md: Changelog file for tracking changes in the project.\nCONTRIBUTING.md: Guidelines for contributing to the project.",
+    "crumbs": [
+      "Overview",
+      "Contributing"
+    ]
   }
 ]

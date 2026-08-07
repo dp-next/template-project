@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,10 +13,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -75,14 +78,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-b2decb1deadbaa156a00df29d0031ec9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-65f4313a2293a1db25a196f505ddfda3.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-b2decb1deadbaa156a00df29d0031ec9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-6a537fba8eaf0f87500e2e8a30aa56d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b540b6f04bd439ed7a1e576ece92db15.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-6a537fba8eaf0f87500e2e8a30aa56d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-e9d45682dd608446e97c876f979852ea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-e9d45682dd608446e97c876f979852ea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-e9d45682dd608446e97c876f979852ea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-68ab1bfbc85d4ebdd46938b1a7303c29.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-68ab1bfbc85d4ebdd46938b1a7303c29.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-68ab1bfbc85d4ebdd46938b1a7303c29.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -210,7 +213,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#creator" id="toc-creator" class="nav-link active" data-scroll-target="#creator">Creator</a>
   <ul class="collapse">
   <li><a href="#setting-up-a-github-repository" id="toc-setting-up-a-github-repository" class="nav-link" data-scroll-target="#setting-up-a-github-repository">Setting up a GitHub repository</a></li>
-  <li><a href="#auto-releasing-to-zenodo" id="toc-auto-releasing-to-zenodo" class="nav-link" data-scroll-target="#auto-releasing-to-zenodo">Auto-releasing to Zenodo</a></li>
   </ul></li>
   <li><a href="#researcher" id="toc-researcher" class="nav-link" data-scroll-target="#researcher">Researcher</a></li>
   </ul>
@@ -263,7 +265,7 @@ Warning
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> repo create ORG/REPO <span class="at">--source</span><span class="op">=</span>. <span class="at">--public</span><span class="kw">`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> repo create ORG/REPO <span class="at">--source</span><span class="op">=</span>. <span class="at">--public</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -283,27 +285,10 @@ Warning
 <li>The workflow <code>.github/workflows/add-to-project.yml</code> requires the <a href="https://github.com/apps/add-to-board-token">add-to-board-token</a> GitHub App (another Seedcase app), along with the <code>ADD_TO_BOARD_TOKEN</code> secret and the <code>ADD_TO_BOARD_APP_ID</code> variable of the GitHub App’s ID.</li>
 </ul>
 </section>
-<section id="auto-releasing-to-zenodo" class="level3">
-<h3 class="anchored" data-anchor-id="auto-releasing-to-zenodo">Auto-releasing to Zenodo</h3>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This step is only necessary if you are using this template for a repository that is part of the Seedcase Project. If you are using this template for a different project, you can skip this step. If you want to set up auto-releasing to Zenodo for a different project, you can use this section to guide you to setting it up for your project.</p>
-</div>
-</div>
-<p>If you create a release on GitHub, either manually or through a GitHub workflow, you can have that release automatically create a record on Zenodo, which is a service that allows you to archive projects and create a DOI for it.</p>
-<p>GitHub and Zenodo have an integration that, when set up, will automatically create a <a href="https://help.zenodo.org/docs/deposit/about-records/">Zenodo record</a> from a <a href="https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases">GitHub release</a>. This is useful if you want to create a DOI for your project, which will allow you or others to cite it in their work as well as provide more exposure for your project. Connecting GitHub to Zenodo is very easy, check out Zenodo’s <a href="https://help.zenodo.org/docs/github/archive-software/github-upload/">guide</a> on it.</p>
-</section>
 </section>
 <section id="researcher" class="level2">
 <h2 class="anchored" data-anchor-id="researcher">Researcher</h2>
+<p>For now, the <code>TODO.md</code> file contains enough information on what the next steps are for the researcher.</p>
 
 
 </section>
