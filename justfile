@@ -54,7 +54,7 @@ format-md:
   # Use both rumdl and panache, for different purposes
   uvx rumdl fmt --silent
   # `includes` option doesn't work with Jinja files, so do manually
-  uvx rumdl fmt --silent **/*.qmd.jinja **/*.md.jinja
+  uvx rumdl fmt --silent **/*.md.jinja
   uvx --from panache-cli panache format . --quiet
 
 # Test template creation
