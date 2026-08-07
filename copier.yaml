@@ -1,0 +1,16 @@
+_subdirectory: "template"
+
+# Message to show after generating or regenerating the project successfully
+_message_after_copy: |
+
+  Your project "{{ github_repo }}" has been created successfully!  See
+  the template's guide as well as the "TODO.md" file in the newly created
+  project for more details on the next steps.
+
+# Questions
+github_repo:
+  type: str
+  help: |
+    What is the name of the GitHub repository where the template will be or
+    is stored? We strongly recommend using the default given.
+  default: "{{ _folder_name }}"

@@ -1,0 +1,58 @@
+# These are the current states: "ongoing", "completed", "abandoned"
+status: "ongoing"
+# TODO: Fill in this after creating from the template.
+date-created: ""
+
+# Only fill these in once you've published these things and gotten a DOI.
+doi:
+  publication: ""
+  preprint: ""
+  protocol: ""
+  repo: ""
+
+# TODO: Fill this in as soon as possible.
+# This info is used to automatically create a webpage that lists all the
+# projects in DP-Next.
+project:
+  title: ""
+  description: |
+    # Introduction
+
+    # Aims and hypotheses
+
+    # Data sources
+
+    # Statistical methods
+
+    # Proposed outputs and timelines
+
+# This info is also used to display on DP-Next websites.
+authors:
+  - name: ""
+    email: ""
+    primary: true
+    # Use the https://credit.niso.org roles. They are listed all below. Keep only the relevant ones.
+    roles:
+      - "conceptualization"
+      - "data curation"
+      - "formal analysis"
+      - "funding acquisition"
+      - "investigation"
+      - "methodology"
+      - "project administration"
+      - "resources"
+      - "software"
+      - "supervision"
+      - "validation"
+      - "visualization"
+      - "writing – original draft"
+      - "writing – review & editing"
+    # Optional, who your supervisors are.
+    supervisors:
+      - name:
+      - name:
+  - name: ""
+    email: ""
+    roles:
+      - analysis
+      - writing

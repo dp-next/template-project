@@ -1,0 +1,32 @@
+# RStudio specific
+.Rhistory
+.RData
+.Rproj.user
+*.out
+*.Rout
+
+# Quarto files
+.quarto
+/.quarto/
+docs/.quarto/
+**/*.quarto_ipynb
+*_files
+_freeze
+*_freeze
+_site
+_book
+
+# Don't commit research data!
+data/
+!data/README.md
+data-raw/
+!data-raw/README.md
+
+# Temporary files
+*.tmp
+
+# MacOS
+.DS_Store
+
+# Cache folders
+*_cache/
