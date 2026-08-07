@@ -26,7 +26,7 @@ putting your project on GitHub, you can use the `gh` command line tool to upload
 the project to GitHub:
 
 ```bash {filename="Terminal"}
-gh repo create ORG/REPO --source=. --public`
+gh repo create ORG/REPO --source=. --public
 ```
 :::
 
@@ -61,28 +61,7 @@ specific workflows in this template that require this additional setup are:
   (another Seedcase app), along with the `ADD_TO_BOARD_TOKEN` secret and the
   `ADD_TO_BOARD_APP_ID` variable of the GitHub App's ID.
 
-### Auto-releasing to Zenodo
-
-::: callout-warning
-This step is only necessary if you are using this template for a repository that
-is part of the Seedcase Project. If you are using this template for a different
-project, you can skip this step. If you want to set up auto-releasing to Zenodo
-for a different project, you can use this section to guide you to setting it up
-for your project.
-:::
-
-If you create a release on GitHub, either manually or through a GitHub workflow,
-you can have that release automatically create a record on Zenodo, which is a
-service that allows you to archive projects and create a DOI for it.
-
-GitHub and Zenodo have an integration that, when set up, will automatically
-create a [Zenodo record](https://help.zenodo.org/docs/deposit/about-records/)
-from a [GitHub
-release](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases).
-This is useful if you want to create a DOI for your project, which will allow
-you or others to cite it in their work as well as provide more exposure for your
-project. Connecting GitHub to Zenodo is very easy, check out Zenodo's
-[guide](https://help.zenodo.org/docs/github/archive-software/github-upload/) on
-it.
-
 ## Researcher
+
+For now, the `TODO.md` file contains enough information on what the next steps
+are for the researcher.
