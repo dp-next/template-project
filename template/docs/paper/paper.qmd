@@ -17,7 +17,7 @@ execute:
 #| include: false
 ```
 
-# Abstract
+## Abstract
 
 Objective:
 
@@ -27,20 +27,20 @@ Results:
 
 Conclusions:
 
-# Introduction
+## Introduction
 
-# Research Design and Methods
+## Research Design and Methods
 
-# Results
+## Results
 
-# Conclusions
+## Conclusions
 
-# Acknowledgements
+## Acknowledgements
 
-# References
+## References
 
-# Tables
+## Tables
 
-# Figures
+## Figures
 
-# Supplemental Material
+## Supplemental Material
