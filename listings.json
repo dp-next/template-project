@@ -1,0 +1,11 @@
+[
+  {
+    "listing": "/docs/guide/index.html",
+    "items": [
+      "/docs/guide/installing.html",
+      "/docs/guide/using.html",
+      "/docs/guide/updating.html",
+      "/docs/guide/next-steps.html"
+    ]
+  }
+]

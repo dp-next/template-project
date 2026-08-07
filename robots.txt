@@ -1,0 +1,1 @@
+Sitemap: https://dp-next.github.io/template-project/sitemap.xml
