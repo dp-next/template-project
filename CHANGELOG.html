@@ -118,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CHANGELOG.html">CHANGELOG.html</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CHANGELOG.html">Changelog</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -139,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CHANGELOG.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">CHANGELOG.html</span></a>
+ <span class="menu-text">Changelog</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -153,8 +153,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#changelog" id="toc-changelog" class="nav-link active" data-scroll-target="#changelog">Changelog</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">[0.1.0] - 2026-08-07</a>
+  <ul class="collapse">
+  <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">✨ Features</a></li>
+  <li><a href="#fixes" id="toc-fixes" class="nav-link" data-scroll-target="#fixes">🐛 Fixes</a></li>
+  <li><a href="#refactor" id="toc-refactor" class="nav-link" data-scroll-target="#refactor">♻️ Refactor</a></li>
+  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">📝 Documentation</a></li>
+  <li><a href="#styling" id="toc-styling" class="nav-link" data-scroll-target="#styling">💄 Styling</a></li>
+  <li><a href="#cicd" id="toc-cicd" class="nav-link" data-scroll-target="#cicd">👷 CI/CD</a></li>
+  <li><a href="#miscellaneous" id="toc-miscellaneous" class="nav-link" data-scroll-target="#miscellaneous">👩‍💻 Miscellaneous</a></li>
+  <li><a href="#new-contributors" id="toc-new-contributors" class="nav-link" data-scroll-target="#new-contributors">❤️ New contributors</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/dp-next/template-project/edit/main/CHANGELOG.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dp-next/template-project/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/dp-next/template-project/blob/main/CHANGELOG.md" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
@@ -162,9 +181,69 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<!-- Will be overwritten by git-cliff. -->
+<section id="changelog" class="level1">
+<h1>Changelog</h1>
+<p>Since we follow <a href="https://decisions.seedcase-project.org/why-conventional-commits/">Conventional Commits</a> when writing commit messages, we’re able to automatically create formal “releases” of the template based on the commit messages. Releases in the context of template are when changes occur to the <code>template/</code> files or to the <code>copier.yaml</code> files. The releases are also published to Zenodo for easier discovery, archival, and citation purposes. We use <a href="https://decisions.seedcase-project.org/why-semantic-release-with-cocogitto/">Cocogitto</a> to be able to automatically create these releases, which uses <a href="https://semverdoc.org">SemVar</a> as the version numbering scheme, and <a href="https://decisions.seedcase-project.org/why-changelog-with-git-cliff/">Git Cliff</a> to generate the changelog based on the commit messages.</p>
+<p>Because releases are created based on commit messages, a new release is created quite often—sometimes several times in a day. This also means that any individual release will not have many changes within it. Below is a list of the releases we’ve made so far, along with what was changed within each release.</p>
+<p>Commits from bots, like <code>dependabot</code> or <code>pre-commit-ci</code>, are not included in the changelog.</p>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">[0.1.0] - 2026-08-07</h2>
+<section id="features" class="level3">
+<h3 class="anchored" data-anchor-id="features">✨ Features</h3>
+<ul>
+<li>Add start of a template project by <a href="https://github.com/lwjohnst86"><code>@lwjohnst86</code></a> (<a href="https://github.com/dp-next/template-project/commit/a10da618f401d3c366f942aecd5262118d037b71">a10da61</a>)</li>
+</ul>
+</section>
+<section id="fixes" class="level3">
+<h3 class="anchored" data-anchor-id="fixes">🐛 Fixes</h3>
+<ul>
+<li>Use <code>*</code> to ignore everything but the README files by <a href="https://github.com/lwjohnst86"><code>@lwjohnst86</code></a> (<a href="https://github.com/dp-next/template-project/commit/234ad8995d243a592aa76db28e28fe1940f62315">234ad89</a>)</li>
+</ul>
+</section>
+<section id="refactor" class="level3">
+<h3 class="anchored" data-anchor-id="refactor">♻️ Refactor</h3>
+<ul>
+<li>Keep <code>sandbox.qmd</code> simple by <a href="https://github.com/lwjohnst86"><code>@lwjohnst86</code></a> (<a href="https://github.com/dp-next/template-project/commit/ee7cb951921c5f9f66d449e18ee5963810eedc21">ee7cb95</a>)</li>
+</ul>
+</section>
+<section id="documentation" class="level3">
+<h3 class="anchored" data-anchor-id="documentation">📝 Documentation</h3>
+<ul>
+<li>Remove some old text from guide by <a href="https://github.com/lwjohnst86"><code>@lwjohnst86</code></a> (<a href="https://github.com/dp-next/template-project/commit/73db80c83ab9f8ff21d91e064f4415990396ccf3">73db80c</a>)</li>
+</ul>
+</section>
+<section id="styling" class="level3">
+<h3 class="anchored" data-anchor-id="styling">💄 Styling</h3>
+<ul>
+<li>Use <code>##</code> in paper Quarto file by <a href="https://github.com/lwjohnst86"><code>@lwjohnst86</code></a> (<a href="https://github.com/dp-next/template-project/commit/54997e0746ffb028c19e3739502912ed95c3371b">54997e0</a>)</li>
+<li>Reformat Markdown files by <a href="https://github.com/lwjohnst86"><code>@lwjohnst86</code></a> (<a href="https://github.com/dp-next/template-project/commit/e0675c45f86e7605589100b3cb27dbb48995e3a5">e0675c4</a>)</li>
+</ul>
+</section>
+<section id="cicd" class="level3">
+<h3 class="anchored" data-anchor-id="cicd">👷 CI/CD</h3>
+<ul>
+<li>Add workflows for checks, releases, etc by <a href="https://github.com/lwjohnst86"><code>@lwjohnst86</code></a> (<a href="https://github.com/dp-next/template-project/commit/9a40db45ce4454d29cf8ccddf07bfad266d80969">9a40db4</a>)</li>
+</ul>
+</section>
+<section id="miscellaneous" class="level3">
+<h3 class="anchored" data-anchor-id="miscellaneous">👩‍💻 Miscellaneous</h3>
+<ul>
+<li>Create template setup from t-squared by <a href="https://github.com/lwjohnst86"><code>@lwjohnst86</code></a> (<a href="https://github.com/dp-next/template-project/commit/dc75771423c8a26a1b7117c88007912459356f25">dc75771</a>)</li>
+<li>Remove formatting of non-existent <code>qmd.jinja</code> files by <a href="https://github.com/lwjohnst86"><code>@lwjohnst86</code></a> (<a href="https://github.com/dp-next/template-project/commit/efcb0b4f357ab47f586fc35328e59b6ac292d1f4">efcb0b4</a>)</li>
+<li>Build contributor file by <a href="https://github.com/lwjohnst86"><code>@lwjohnst86</code></a> (<a href="https://github.com/dp-next/template-project/commit/265dbc656d080fce42447e669860e11d562f379f">265dbc6</a>)</li>
+<li>Comment out rumdl, it mangles div blocks by <a href="https://github.com/lwjohnst86"><code>@lwjohnst86</code></a> (<a href="https://github.com/dp-next/template-project/commit/0c8310535ed7b6433e6f9354d050fe814b0964fa">0c83105</a>)</li>
+</ul>
+</section>
+<section id="new-contributors" class="level3">
+<h3 class="anchored" data-anchor-id="new-contributors">❤️ New contributors</h3>
+<ul>
+<li><a href="https://github.com/lwjohnst86"><code>@lwjohnst86</code></a> made their first contribution</li>
+</ul>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -591,7 +670,7 @@ ul.task-list li input[type="checkbox"] {
  License: CC-BY 4.0
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/dp-next/template-project/edit/main/CHANGELOG.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dp-next/template-project/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/dp-next/template-project/blob/main/CHANGELOG.md" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dp-next/template-project/edit/main/CHANGELOG.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dp-next/template-project/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/dp-next/template-project/blob/main/CHANGELOG.md" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
