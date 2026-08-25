@@ -21,6 +21,15 @@ releases we've made so far, along with what was changed within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
 
+## [0.2.1](https://github.com/dp-next/template-project/compare/0.2.0..0.2.1) - 2026-08-25
+
+### 📝 Documentation
+
+- Uncomment release badge
+  [#8](https://github.com/dp-next/template-project/pull/8) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([45c7cb4](https://github.com/dp-next/template-project/commit/45c7cb4e029ed09629beceb378f404e67a18589c))
+
 ## [0.2.0](https://github.com/dp-next/template-project/compare/0.1.0..0.2.0) - 2026-08-25
 
 ### ✨ Features
