@@ -1,0 +1,42 @@
+# Next steps
+
+## For admin/repo creator
+
+Review the [template guide](https://t-squared.seedcase-project.org/docs/guide/)
+for more information on how to use the template and the next steps after copying
+the project. Open a terminal, ideally done right after creating the project from
+the template with `uvx copier`, and run these commands:
+
+- `git init -b main` to create the project as a Git repository.
+- `git add . && git commit -m "start of new project"` to add the files to the Git history.
+- `gh repo create dp-next/{{ github_repo }} --source=. --public --push` to
+  create the GitHub repository from this project.
+
+Or in an easy copy-paste format:
+
+```
+git init -b main && git add . && git commit -m "start of project" && gh repo create dp-next/{{ github_repo }} --source=. --public --push
+```
+
+Then, either ask Luke to do the next steps or optionally install the
+[`spaid`](https://github.com/seedcase-project/spaid) CLI tool and run these
+setup steps:
+
+- `spaid_gh_set_repo_settings -h` to set the repository settings.
+- `spaid_gh_ruleset_basic_protect_main -h` to protect the main branch.
+- `spaid_team_add_repo dp-next research-projects-team {{ github_repo }}` to add the repository to the team.
+- `spaid_team_add_user dp-next research-projects-team USERNAME` to add the researcher to the team.
+
+The GitHub repository and project is now all set for the researcher to take
+over! (you can also delete this section too)
+
+## For researcher
+
+- Review all TODO items in this file and throughout the project files that have
+  a `TODO` tag.
+- Review the README files to better understand the file and folder structure.
+- Update the main README file with a description of the project (one of the TODO
+  items).
+- Fill out the `dp-next.yaml` file with information about this project. This
+  file helps the managers and coordinators to keep track of what's going on and
+  what the progress is for all the projects.
