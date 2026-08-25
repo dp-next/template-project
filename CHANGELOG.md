@@ -21,6 +21,33 @@ releases we've made so far, along with what was changed within each release.
 Commits from bots, like `dependabot` or `pre-commit-ci`, are not included in the
 changelog.
 
+## [0.2.0](https://github.com/dp-next/template-project/compare/0.1.0..0.2.0) - 2026-08-25
+
+### ✨ Features
+
+- Add a `now` date stamp to the `dp-next.yaml`
+  [#4](https://github.com/dp-next/template-project/pull/4) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([191c1cf](https://github.com/dp-next/template-project/commit/191c1cf2b23c67e75f116695cbdd92fb073bcfa9))
+
+### ♻️ Refactor
+
+- Clarify the actual next steps that the creator takes
+  [#6](https://github.com/dp-next/template-project/pull/6) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([2241d21](https://github.com/dp-next/template-project/commit/2241d21aec1748851590602f9afbfd860ce3efd2))
+
+### 📝 Documentation
+
+- Move Lychee install instructions to contributing
+  [#7](https://github.com/dp-next/template-project/pull/7) by
+  [`@lwjohnst86`](https://github.com/lwjohnst86)
+  ([ee5a060](https://github.com/dp-next/template-project/commit/ee5a0601635a2115eb710af3d2b924bfb7ab6127))
+
+### ❤️ New contributors
+
+- `@pre-commit-ci[bot]` started making automated contributions
+
 ## [0.1.0] - 2026-08-07
 
 ### ✨ Features
@@ -75,5 +102,7 @@ changelog.
   ([0c83105](https://github.com/dp-next/template-project/commit/0c8310535ed7b6433e6f9354d050fe814b0964fa))
 
 ### ❤️ New contributors
+
+- `@github-actions[bot]` started making automated contributions
 
 - [`@lwjohnst86`](https://github.com/lwjohnst86) made their first contribution
