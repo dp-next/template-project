@@ -17,8 +17,15 @@ build your project smoothly and effectively. First, open a terminal and run the
 following command:
 
 ```bash {filename="Terminal"}
-uvx copier copy gh:dp-next/template-project path/to/PROJECT-NAME
+uvx copier copy --trust gh:dp-next/template-project path/to/PROJECT-NAME
 ```
+
+::: callout-important
+We use the `--trust` flag because we need to get the current date from your
+computer in order to add the "created date" in the `dp-next.yaml` file, which
+requires using another tool (called
+[`jinja2-time`](https://pypi.org/project/jinja2-time/)).
+:::
 
 The `copy` command uses the template on GitHub (`gh:`) at the
 `dp-next/template-project` location. The `path/to/` is the location where you'd
@@ -35,7 +42,7 @@ project. This will add all the template's files and configurations to the
 existing project.
 
 ```bash {filename="Terminal"}
-uvx copier copy gh:dp-next/template-project path/to/EXISTING-PROJECT
+uvx copier copy --trust gh:dp-next/template-project path/to/EXISTING-PROJECT
 ```
 
 See the comment above in the "Creating a new project" section about the naming

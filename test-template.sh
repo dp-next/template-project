@@ -13,6 +13,7 @@ template_dir="$(pwd)"
 copy () {
   # '-r HEAD' means use the HEAD, including uncommitted changes.
   uvx copier copy $1 $2 \
+    --trust \
     -r HEAD \
     --defaults \
     --overwrite
@@ -38,6 +39,7 @@ echo "Testing copy for new projects -----------"
     git add . &&
     git commit --quiet -m "test: preparing to recopy from the template" &&
     uvx copier recopy \
+      --trust \
       -r HEAD \
       --defaults \
       --overwrite &&

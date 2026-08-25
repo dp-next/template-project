@@ -2,7 +2,7 @@
   just --list --unsorted
 
 # Run all build-related recipes in the justfile
-run-all: update-quarto-theme check-all format-md test-all build-all
+run-all: update-quarto-theme install-deps check-all format-md test-all build-all
 
 # Run all check-related recipes
 check-all: check-spelling check-urls
@@ -32,6 +32,10 @@ install-precommit:
   uvx pre-commit install
   uvx pre-commit autoupdate
   uvx pre-commit run --all-files
+
+# Install dependencies
+install-deps:
+  uv tool install --with jinja2-time copier
 
 # Update (or add if not present) the Quarto dp-next-theme extension
 update-quarto-theme:
@@ -65,7 +69,7 @@ test:
 test-manual:
   mkdir -p _temp/manual
   rm -rf _temp/manual/test-template
-  uvx copier copy -r HEAD . _temp/manual/test-template
+  uvx copier copy --trust -r HEAD . _temp/manual/test-template
 
 # Clean up any leftover and temporary build files
 cleanup:
