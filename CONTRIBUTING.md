@@ -28,6 +28,11 @@ justfile with uv. Once you've installed uv, install justfile by running:
 uv tool install rust-just
 ```
 
+We also strongly recommend install
+[Lychee](https://lychee.cli.rs/guides/getting-started/) to help with developing
+the template. Lychee is a link checker that we include in the `justfile` for
+checking for broken links in the files.
+
 We keep all our development workflows in the `justfile`, so you can explore it
 to see what commands are available. To see a list of commands available, run:
 
