@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Instructions for installing the required (and optional) programs to use this template and create a new project from it.">
+<meta name="description" content="Instructions for installing the required programs to use this template and create a new project from it.">
 
 <title>Installing – Template Project</title>
 <style>
@@ -219,7 +219,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    <p>Instructions for installing the required (and optional) programs to use this template and create a new project from it.</p>
+    <p>Instructions for installing the required programs to use this template and create a new project from it.</p>
   </div>
 </div>
 
@@ -241,21 +241,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="https://docs.astral.sh/uv/">uv</a>: A tool for managing Python environments and running commands.</li>
 <li><a href="https://www.python.org/">Python</a>: Required by Copier, the template tool.</li>
 <li><a href="https://copier.readthedocs.io/en/stable/">Copier</a>: A template tool for making new projects in a standardised and structured way.</li>
-<li><a href="https://just.systems/man/en/">just</a>: A build and development management tool that helps with running common build and check tasks.</li>
 </ul>
-<p>You can use uv to install these required programs, so <a href="https://docs.astral.sh/uv/getting-started/installation/">install</a> that first. After you’ve installed uv, install the other programs using:</p>
+<p>You can use uv to install these required programs, so <a href="https://docs.astral.sh/uv/getting-started/installation/">install uv</a> first. After you’ve installed uv, you can easily install all the other programs (like Python) using:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> tool install copier rust-just</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> tool install <span class="at">--with</span> jinja2-time copier</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>uv will also install Python for you when you install these tools.</p>
-<p>There are some optional, though <strong>strongly recommended</strong>, programs to install and use in any project created with this template:</p>
+<p>To do the next steps, you also need to install:</p>
 <ul>
 <li><a href="https://git-scm.com/">Git</a>: For version control and setting up Git to track the newly created project.</li>
-<li><a href="https://lychee.cli.rs/guides/getting-started/">Lychee</a>: A link checker that we include in the <code>justfile</code> for checking for broken links in the files.</li>
-<li><a href="https://quarto.org/">Quarto</a>: A scientific and technical publishing system built on Pandoc. The website built with this template is created with Quarto, and the project created from this template is also set up to use Quarto too.</li>
 <li><a href="https://cli.github.com/">gh cli</a>: For managing GitHub repositories and settings from the command line. There are some post-creation steps we’ve included that use gh to simplify setting up a GitHub repository for the project.</li>
 </ul>
 

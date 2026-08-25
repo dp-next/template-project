@@ -251,7 +251,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uvx</span> copier copy gh:dp-next/template-project path/to/PROJECT-NAME</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uvx</span> copier copy <span class="at">--trust</span> gh:dp-next/template-project path/to/PROJECT-NAME</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We use the <code>--trust</code> flag because we need to get the current date from your computer in order to add the “created date” in the <code>dp-next.yaml</code> file, which requires using another tool (called <a href="https://pypi.org/project/jinja2-time/"><code>jinja2-time</code></a>).</p>
+</div>
 </div>
 <p>The <code>copy</code> command uses the template on GitHub (<code>gh:</code>) at the <code>dp-next/template-project</code> location. The <code>path/to/</code> is the location where you’d like the new project to be created and <code>PROJECT-NAME</code> is the name you want to give for the new project’s directory and (ideally) the GitHub repository for the project. The name should be something short and meaningful, ideally lowercase, with <code>-</code> instead of spaces, and no special characters.</p>
 </section>
@@ -262,7 +275,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uvx</span> copier copy gh:dp-next/template-project path/to/EXISTING-PROJECT</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uvx</span> copier copy <span class="at">--trust</span> gh:dp-next/template-project path/to/EXISTING-PROJECT</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>See the comment above in the “Creating a new project” section about the naming of the existing project directory. It will go through a series of prompts, as in the case of creating a new project, including asking if you want to overwrite existing files.</p>
 <div class="callout callout-style-default callout-note callout-titled">
