@@ -26,6 +26,9 @@ jobs:
       - name: Install justfile
         run: uv tool install rust-just
 
+      - name: Install dependencies
+        run: just install-deps
+
       # Set this user so that the checks create Git commits.
       - name: Set bot user
         run: |

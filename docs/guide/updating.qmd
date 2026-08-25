@@ -32,9 +32,9 @@ prompt you for the questions that have changed since the last time you copied
 the template.
 
 ```bash {filename="Terminal"}
-uvx copier update --defaults
+uvx copier update --trust --defaults
 # Or
-uvx copier recopy --defaults
+uvx copier recopy --trust --defaults
 ```
 
 As with the `copy` command, the project needs to be tracked by Git and must be

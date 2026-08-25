@@ -14,3 +14,7 @@ github_repo:
     What is the name of the GitHub repository where the template will be or
     is stored? We strongly recommend using the default given.
   default: "{{ _folder_name }}"
+
+# Jinja extension to add a "now" tag
+_jinja_extensions:
+  - jinja2_time.TimeExtension
