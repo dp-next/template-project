@@ -250,45 +250,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="creator">Creator</h2>
 <section id="setting-up-a-github-repository" class="level3">
 <h3 class="anchored" data-anchor-id="setting-up-a-github-repository">Setting up a GitHub repository</h3>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>These series of steps are only necessary if you are using this template for a repository that is part of the Seedcase Project. If you want a quick way of putting your project on GitHub, you can use the <code>gh</code> command line tool to upload the project to GitHub:</p>
+<p>Before you can put the project on GitHub, you need to set up the project to be a Git repository. Use these commands in the terminal to do that:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> repo create ORG/REPO <span class="at">--source</span><span class="op">=</span>. <span class="at">--public</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init <span class="at">-b</span> main</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"start of project"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</div>
-</div>
-<p>We have a custom command line tool that we developed to help manage GitHub repositories for Seedcase Project repositories. While it’s useful for us, it isn’t designed or build in a way that makes it easy for others to use.</p>
-<p>For setting up a GitHub repository for the created project that will be part of the Seedcase Project, you’ll need to install our internal tool <a href="https://github.com/seedcase-project/spaid"><code>spaid</code></a> and use the following commands to run the next setup steps:</p>
+<p>These commands will initialize the project as a Git repository (<code>init</code>) with <code>main</code> as the main branch name and then will <code>add</code> and <code>commit</code> all the files into the Git history. Now you’re ready to upload to GitHub!</p>
+<p>The easiest and quickest way to put the repository up onto the DP-Next GitHub organization is to use the <code>gh</code> command line tool:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">spaid_gh_create_repo_from_local</span> <span class="at">-h</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">spaid_gh_set_repo_settings</span> <span class="at">-h</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">spaid_gh_ruleset_basic_protect_main</span> <span class="at">-h</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">spaid_gh_ruleset_require_pr</span> <span class="at">-h</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> repo create dp-next/REPO <span class="at">--source</span><span class="op">=</span>. <span class="at">--public</span> <span class="at">--push</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Some configuration is needed after copying this template to a new repository, including configuration external to the repository. Some GitHub workflows require installing GitHub Apps, for greater security purposes and easier administration when managing multiple repositories. The <a href="https://guidebook.seedcase-project.org/operations/security#using-github-apps-to-generate-tokens">security section</a> in our <a href="https://guidebook.seedcase-project.org/">Guidebook</a> provides some instructions on how to set up GitHub Apps, secrets, and variables. Ideally the secrets and variables should be set up in the organization settings. The specific workflows in this template that require this additional setup are:</p>
-<ul>
-<li>The workflow <code>.github/workflows/add-to-project.yml</code> requires the <a href="https://github.com/apps/add-to-board-token">add-to-board-token</a> GitHub App (another Seedcase app), along with the <code>ADD_TO_BOARD_TOKEN</code> secret and the <code>ADD_TO_BOARD_APP_ID</code> variable of the GitHub App’s ID.</li>
-</ul>
+<p>This command creates a public repository on GitHub using the folder Git repository (<code>.</code>) and then pushes the contents of the folder up to GitHub. The next steps include some administrative tasks that make it easier to manage and protect the repository. In <a href="https://seedcase-project.org">Seedcase</a>, we created a custom command line tool to help manage GitHub repositories. While it’s useful for us, it isn’t designed or build in a way that makes it easy for others to use. So for this step, you can try to install our internal tool <a href="https://github.com/seedcase-project/spaid"><code>spaid</code></a> and run the commands below. Or you can ask Luke to do these next steps, as they are very quick to do.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">spaid_gh_set_repo_settings</span> dp-next/REPO</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">spaid_gh_ruleset_basic_protect_main</span> dp-next/REPO</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">spaid_team_add_repo</span> dp-next research-projects-team REPO</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">spaid_team_add_user</span> dp-next research-projects-team USERNAME</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Some configuration may be needed after copying this template to a new repository, including configuration external to the repository. However, most of these settings have already been set at the organizational level. For informational purposes, the created workflow in <code>.github/workflows/add-to-project.yml</code> of the newly created repository requires the <a href="https://github.com/apps/add-to-board-token">add-to-board-token</a> GitHub App (a Seedcase app), along with the <code>ADD_TO_BOARD_TOKEN</code> secret and the <code>ADD_TO_BOARD_APP_ID</code> variable of the GitHub App’s ID. These can all be set in the GitHub organization settings (and have already been set).</p>
 </section>
 </section>
 <section id="researcher" class="level2">
 <h2 class="anchored" data-anchor-id="researcher">Researcher</h2>
-<p>For now, the <code>TODO.md</code> file contains enough information on what the next steps are for the researcher.</p>
+<p>For now, the <code>TODO.md</code> file contains enough information on what the next steps are for the researcher. Importantly, you need to fill out the <code>dp-next.yaml</code> file, as we use that to keep track of projects.</p>
 
 
 </section>
